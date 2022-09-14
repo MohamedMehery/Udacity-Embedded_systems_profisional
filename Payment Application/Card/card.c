@@ -49,6 +49,29 @@ EN_cardError_t  getCardExpiryDate(ST_cardData_t *cardData)
     }
 }
 
+
+EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
+{
+    EN_cardError_t result = OK;
+    if(!cardData->primaryAccountNumber)
+    {
+        result = WRONG_PAN;
+        return result;
+    }
+    else
+    {
+        int len = strlen(cardData->primaryAccountNumber);
+        if((len < 16) ||  (len > 19))
+        {
+            result = WRONG_PAN ;
+            return result;
+        }
+    }
+
+    return result;
+}
+
+
 // getCardHolderName test code
 // int main()
 // {
@@ -88,31 +111,73 @@ EN_cardError_t  getCardExpiryDate(ST_cardData_t *cardData)
 //     }
 // }
 
-int main(void)
+// int main(void)
+// {
+//     uint8_t parr[4][6] = {
+//         "05/25",
+//         "25/50",
+//         "5/5",
+//         "0"
+//     };
+//     ST_cardData_t inputs[4] = {0};
+//     strcpy(inputs[0].cardExpirationDate , parr[0]);
+//     strcpy(inputs[1].cardExpirationDate , parr[1]);
+//     strcpy(inputs[2].cardExpirationDate , parr[2]);
+//     strcpy(inputs[2].cardExpirationDate , parr[3]);
+
+//     EN_cardError_t outputs[4] = {OK};
+//     outputs[0] = getCardExpiryDate(&inputs[0]);
+//     outputs[1] = getCardExpiryDate(&inputs[1]);
+//     outputs[2] = getCardExpiryDate(&inputs[2]);
+//     outputs[3] = getCardExpiryDate(&inputs[3]);   
+//     for(int i = 0 ; i < 4 ; i++)
+//     {
+//         switch (outputs[i])
+//         {
+//         case WRONG_EXP_DATE:
+//                 printf("WRONG_EXP_DATE\n");
+//             break;
+        
+//         default:
+//                 printf("OK\n");
+//             break;
+//         }
+//     }
+    
+//     return 0;
+// }
+
+
+//getCardPAN test code
+int main()
 {
-    uint8_t parr[4][6] = {
-        "05/25",
-        "25/50",
-        "5/5",
-        "0"
+    ST_cardData_t inputs[4];
+    uint8_t parr[4][20] = {
+        "0123456789",
+        "0123456789012345",
+        "012345678901234567890123",
+        '\0'
     };
-    ST_cardData_t inputs[4] = {0};
-    strcpy(inputs[0].cardExpirationDate , parr[0]);
-    strcpy(inputs[1].cardExpirationDate , parr[1]);
-    strcpy(inputs[2].cardExpirationDate , parr[2]);
-    strcpy(inputs[2].cardExpirationDate , parr[3]);
+
+
+    strcpy(inputs[0].primaryAccountNumber , parr[0]);
+    strcpy(inputs[1].primaryAccountNumber , parr[1]);
+    strcpy(inputs[2].primaryAccountNumber , parr[2]);
+    strcpy(inputs[2].primaryAccountNumber , parr[3]);
 
     EN_cardError_t outputs[4] = {OK};
-    outputs[0] = getCardExpiryDate(&inputs[0]);
-    outputs[1] = getCardExpiryDate(&inputs[1]);
-    outputs[2] = getCardExpiryDate(&inputs[2]);
-    outputs[3] = getCardExpiryDate(&inputs[3]);   
+
+    outputs[0] = getCardPAN(&inputs[0]);
+    outputs[1] = getCardPAN(&inputs[1]);
+    outputs[2] = getCardPAN(&inputs[2]);
+    outputs[3] = getCardPAN(&inputs[3]);
+    
     for(int i = 0 ; i < 4 ; i++)
     {
         switch (outputs[i])
         {
-        case WRONG_EXP_DATE:
-                printf("WRONG_EXP_DATE\n");
+        case WRONG_PAN:
+                printf("WRONG_PAN\n");
             break;
         
         default:
@@ -120,6 +185,5 @@ int main(void)
             break;
         }
     }
-    
-    return 0;
 }
+

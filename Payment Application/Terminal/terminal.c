@@ -46,6 +46,14 @@ EN_terminalError_t isCardExpired(ST_cardData_t* cardData , ST_terminalData_t* te
     return result;
 }
 
+EN_terminalError_t getTransactionAmount(ST_terminalData_t * termData)
+{
+    EN_terminalError_t result = INVALID_AMOUNT;
+    if( termData->transAmount <= 0.0f)return result;
+    result = OK;
+    return result;    
+}
+
 // test gettransactionDate
 // int main(void)
 // {
@@ -136,29 +144,24 @@ EN_terminalError_t isCardExpired(ST_cardData_t* cardData , ST_terminalData_t* te
 
 int main(void)
 {
-    uint8_t parr[4][11] = {
-        "25/06/2022",
-        "25/50",
-        "25/60/2022",
-        '\0'
-    };
+    float testcases[4] = { 500.02f , 65.5f , -65.5f , 0.0f};
     ST_terminalData_t inputs[4] = {0};
-    strcpy(inputs[0].transactionDate , parr[0]);
-    strcpy(inputs[1].transactionDate , parr[1]);
-    strcpy(inputs[2].transactionDate , parr[2]);
-    strcpy(inputs[2].transactionDate , parr[3]);
+    inputs[0].transAmount = testcases[0];
+    inputs[1].transAmount = testcases[1];
+    inputs[2].transAmount = testcases[2];
+    inputs[3].transAmount = testcases[3];
 
     EN_terminalError_t outputs[4] = {OK};
-    outputs[0] = getTransactionDate(&inputs[0]);
-    outputs[1] = getTransactionDate(&inputs[1]);
-    outputs[2] = getTransactionDate(&inputs[2]);
-    outputs[3] = getTransactionDate(&inputs[3]);   
+    outputs[0] = getTransactionAmount(&inputs[0]);
+    outputs[1] = getTransactionAmount(&inputs[1]);
+    outputs[2] = getTransactionAmount(&inputs[2]);
+    outputs[3] = getTransactionAmount(&inputs[3]);   
     for(int i = 0 ; i < 4 ; i++)
     {
         switch (outputs[i])
         {
-        case WRONG_DATE:
-                printf("WRONG_DATE\n");
+        case INVALID_AMOUNT:
+                printf("INVALID_AMOUNT\n");
             break;
         
         default:

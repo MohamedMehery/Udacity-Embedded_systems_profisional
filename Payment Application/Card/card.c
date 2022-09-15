@@ -87,7 +87,7 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 //     strcpy(inputs[0].cardHolderName , parr[0]);
 //     strcpy(inputs[1].cardHolderName , parr[1]);
 //     strcpy(inputs[2].cardHolderName , parr[2]);
-//     strcpy(inputs[2].cardHolderName , parr[3]);
+//     strcpy(inputs[3].cardHolderName , parr[3]);
 
 //     EN_cardError_t outputs[4] = {OK};
 
@@ -123,7 +123,7 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 //     strcpy(inputs[0].cardExpirationDate , parr[0]);
 //     strcpy(inputs[1].cardExpirationDate , parr[1]);
 //     strcpy(inputs[2].cardExpirationDate , parr[2]);
-//     strcpy(inputs[2].cardExpirationDate , parr[3]);
+//     strcpy(inputs[3].cardExpirationDate , parr[3]);
 
 //     EN_cardError_t outputs[4] = {OK};
 //     outputs[0] = getCardExpiryDate(&inputs[0]);
@@ -163,7 +163,7 @@ int main()
     strcpy(inputs[0].primaryAccountNumber , parr[0]);
     strcpy(inputs[1].primaryAccountNumber , parr[1]);
     strcpy(inputs[2].primaryAccountNumber , parr[2]);
-    strcpy(inputs[2].primaryAccountNumber , parr[3]);
+    strcpy(inputs[3].primaryAccountNumber , parr[3]);
 
     EN_cardError_t outputs[4] = {OK};
 

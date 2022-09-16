@@ -148,42 +148,42 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 // }
 
 
-//getCardPAN test code
-int main()
-{
-    ST_cardData_t inputs[4];
-    uint8_t parr[4][20] = {
-        "0123456789",
-        "0123456789012345",
-        "012345678901234567890123",
-        '\0'
-    };
+// //getCardPAN test code
+// int main()
+// {
+//     ST_cardData_t inputs[4];
+//     uint8_t parr[4][20] = {
+//         "0123456789",
+//         "0123456789012345",
+//         "012345678901234567890123",
+//         '\0'
+//     };
 
 
-    strcpy(inputs[0].primaryAccountNumber , parr[0]);
-    strcpy(inputs[1].primaryAccountNumber , parr[1]);
-    strcpy(inputs[2].primaryAccountNumber , parr[2]);
-    strcpy(inputs[3].primaryAccountNumber , parr[3]);
+//     strcpy(inputs[0].primaryAccountNumber , parr[0]);
+//     strcpy(inputs[1].primaryAccountNumber , parr[1]);
+//     strcpy(inputs[2].primaryAccountNumber , parr[2]);
+//     strcpy(inputs[3].primaryAccountNumber , parr[3]);
 
-    EN_cardError_t outputs[4] = {OK};
+//     EN_cardError_t outputs[4] = {OK};
 
-    outputs[0] = getCardPAN(&inputs[0]);
-    outputs[1] = getCardPAN(&inputs[1]);
-    outputs[2] = getCardPAN(&inputs[2]);
-    outputs[3] = getCardPAN(&inputs[3]);
+//     outputs[0] = getCardPAN(&inputs[0]);
+//     outputs[1] = getCardPAN(&inputs[1]);
+//     outputs[2] = getCardPAN(&inputs[2]);
+//     outputs[3] = getCardPAN(&inputs[3]);
     
-    for(int i = 0 ; i < 4 ; i++)
-    {
-        switch (outputs[i])
-        {
-        case WRONG_PAN:
-                printf("WRONG_PAN\n");
-            break;
+//     for(int i = 0 ; i < 4 ; i++)
+//     {
+//         switch (outputs[i])
+//         {
+//         case WRONG_PAN:
+//                 printf("WRONG_PAN\n");
+//             break;
         
-        default:
-                printf("OK\n");
-            break;
-        }
-    }
-}
+//         default:
+//                 printf("OK\n");
+//             break;
+//         }
+//     }
+// }
 

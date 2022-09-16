@@ -228,33 +228,33 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     return 0;
 // }
 
-int main(void)
-{
-    float testcases[4] = { 500.02f , 65.5f , -65.5f , 0.0f};
-    ST_terminalData_t inputs[4] = {0};
-    inputs[0].transAmount = testcases[0];
-    inputs[1].transAmount = testcases[1];
-    inputs[2].transAmount = testcases[2];
-    inputs[3].transAmount = testcases[3];
+// int main(void)
+// {
+//     float testcases[4] = { 500.02f , 65.5f , -65.5f , 0.0f};
+//     ST_terminalData_t inputs[4] = {0};
+//     inputs[0].transAmount = testcases[0];
+//     inputs[1].transAmount = testcases[1];
+//     inputs[2].transAmount = testcases[2];
+//     inputs[3].transAmount = testcases[3];
 
-    EN_terminalError_t outputs[4] = {OK};
-    outputs[0] = setMaxAmount(&inputs[0]);
-    outputs[1] = setMaxAmount(&inputs[1]);
-    outputs[2] = setMaxAmount(&inputs[2]);
-    outputs[3] = setMaxAmount(&inputs[3]);   
-    for(int i = 0 ; i < 4 ; i++)
-    {
-        switch (outputs[i])
-        {
-        case INVALID_MAX_AMOUNT:
-                printf("INVALID_MAX_AMOUNT\n");
-            break;
+//     EN_terminalError_t outputs[4] = {OK};
+//     outputs[0] = setMaxAmount(&inputs[0]);
+//     outputs[1] = setMaxAmount(&inputs[1]);
+//     outputs[2] = setMaxAmount(&inputs[2]);
+//     outputs[3] = setMaxAmount(&inputs[3]);   
+//     for(int i = 0 ; i < 4 ; i++)
+//     {
+//         switch (outputs[i])
+//         {
+//         case INVALID_MAX_AMOUNT:
+//                 printf("INVALID_MAX_AMOUNT\n");
+//             break;
         
-        default:
-                printf("OK\n");
-            break;
-        }
-    }
+//         default:
+//                 printf("OK\n");
+//             break;
+//         }
+//     }
     
-    return 0;
-}
+//     return 0;
+// }

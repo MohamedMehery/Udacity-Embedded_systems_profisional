@@ -2,10 +2,10 @@
 
 
 ST_accountsDB_t accounts[255] = {0};
-ST_transaction trans[255] = {0};
+ST_transaction_t trans[255] = {0};
 int account_index = __INT32_MAX__;
 
-EN_transStat_t recieveTransactionData(ST_transaction *transData)
+EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 {
 	if (isValidAccount(&transData->cardHolderData)==ACCOUNT_NOT_FOUND) {
 		transData->transState = DECLINED_STOLEN_CARD;
@@ -65,7 +65,7 @@ EN_serverError_t isAmountAvailable(ST_terminalData_t* termData)
 	return OK_server;
 }
 
-EN_serverError_t saveTransaction(ST_transaction* transData)
+EN_serverError_t saveTransaction(ST_transaction_t* transData)
 {
 	if((account_index > 254) || (account_index < 0)) return SAVING_FAILED;
 
@@ -82,7 +82,7 @@ EN_serverError_t saveTransaction(ST_transaction* transData)
 	return OK_server;
 }
 
-EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transaction* transData)
+EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transaction_t* transData)
 {
 	if((account_index > 254) || (account_index < 0)) return INVALID_CARD;
 
@@ -98,8 +98,8 @@ EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transacti
 	return OK_server;
 }
 
-int main(void)
-{
-    printf("No error\n");
-    return 0;
-}
+// int main(void)
+// {
+//     printf("No error\n");
+//     return 0;
+// }

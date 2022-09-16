@@ -23,7 +23,7 @@ typedef struct ST_transaction_t
 
 typedef enum EN_serverError_t
 {
-    OK_server, SAVING_FAILED, TRANSACTION_NOT_FOUND, ACCOUNT_NOT_FOUND, LOW_BALANCE
+    OK_server, SAVING_FAILED, TRANSACTION_NOT_FOUND, ACCOUNT_NOT_FOUND, LOW_BALANCE ,INVALID_CARD
 }EN_serverError_t ;
 
 typedef struct ST_accountsDB_t

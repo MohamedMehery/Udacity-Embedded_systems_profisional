@@ -1,6 +1,7 @@
 {
     "C_Cpp.errorSquiggles": "Disabled",
     "files.associations": {
-        "terminal.h": "c"
+        "terminal.h": "c",
+        "card.h": "c"
     }
 }

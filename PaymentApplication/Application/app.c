@@ -5,8 +5,7 @@ extern ST_transaction_t trans[255];
 extern int account_index;
 
 // valid data
-void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData
-)
+void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData)
 {
 	// fill cardData
 	strcpy(cardData->cardHolderName , "01234567890123456789");
@@ -35,7 +34,6 @@ void appStart(void)
 	ST_terminalData_t termData;
 	ST_transaction_t transData;
 	EN_terminalError_t terminal_error;
-
 
 	fill_data(&cardData , &termData);
 

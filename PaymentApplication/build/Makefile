@@ -128,29 +128,101 @@ pay/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/build
 .PHONY : pay/fast
 
-card.obj: card.c.obj
-.PHONY : card.obj
+Application/app.obj: Application/app.c.obj
+.PHONY : Application/app.obj
 
 # target to build an object file
-card.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/card.c.obj
-.PHONY : card.c.obj
+Application/app.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Application/app.c.obj
+.PHONY : Application/app.c.obj
 
-card.i: card.c.i
-.PHONY : card.i
+Application/app.i: Application/app.c.i
+.PHONY : Application/app.i
 
 # target to preprocess a source file
-card.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/card.c.i
-.PHONY : card.c.i
+Application/app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Application/app.c.i
+.PHONY : Application/app.c.i
 
-card.s: card.c.s
-.PHONY : card.s
+Application/app.s: Application/app.c.s
+.PHONY : Application/app.s
 
 # target to generate assembly for a file
-card.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/card.c.s
-.PHONY : card.c.s
+Application/app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Application/app.c.s
+.PHONY : Application/app.c.s
+
+Card/card.obj: Card/card.c.obj
+.PHONY : Card/card.obj
+
+# target to build an object file
+Card/card.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Card/card.c.obj
+.PHONY : Card/card.c.obj
+
+Card/card.i: Card/card.c.i
+.PHONY : Card/card.i
+
+# target to preprocess a source file
+Card/card.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Card/card.c.i
+.PHONY : Card/card.c.i
+
+Card/card.s: Card/card.c.s
+.PHONY : Card/card.s
+
+# target to generate assembly for a file
+Card/card.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Card/card.c.s
+.PHONY : Card/card.c.s
+
+Server/server.obj: Server/server.c.obj
+.PHONY : Server/server.obj
+
+# target to build an object file
+Server/server.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Server/server.c.obj
+.PHONY : Server/server.c.obj
+
+Server/server.i: Server/server.c.i
+.PHONY : Server/server.i
+
+# target to preprocess a source file
+Server/server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Server/server.c.i
+.PHONY : Server/server.c.i
+
+Server/server.s: Server/server.c.s
+.PHONY : Server/server.s
+
+# target to generate assembly for a file
+Server/server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Server/server.c.s
+.PHONY : Server/server.c.s
+
+Terminal/terminal.obj: Terminal/terminal.c.obj
+.PHONY : Terminal/terminal.obj
+
+# target to build an object file
+Terminal/terminal.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Terminal/terminal.c.obj
+.PHONY : Terminal/terminal.c.obj
+
+Terminal/terminal.i: Terminal/terminal.c.i
+.PHONY : Terminal/terminal.i
+
+# target to preprocess a source file
+Terminal/terminal.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Terminal/terminal.c.i
+.PHONY : Terminal/terminal.c.i
+
+Terminal/terminal.s: Terminal/terminal.c.s
+.PHONY : Terminal/terminal.s
+
+# target to generate assembly for a file
+Terminal/terminal.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/Terminal/terminal.c.s
+.PHONY : Terminal/terminal.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -176,54 +248,6 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/main.c.s
 .PHONY : main.c.s
 
-server.obj: server.c.obj
-.PHONY : server.obj
-
-# target to build an object file
-server.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/server.c.obj
-.PHONY : server.c.obj
-
-server.i: server.c.i
-.PHONY : server.i
-
-# target to preprocess a source file
-server.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/server.c.i
-.PHONY : server.c.i
-
-server.s: server.c.s
-.PHONY : server.s
-
-# target to generate assembly for a file
-server.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/server.c.s
-.PHONY : server.c.s
-
-terminal.obj: terminal.c.obj
-.PHONY : terminal.obj
-
-# target to build an object file
-terminal.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/terminal.c.obj
-.PHONY : terminal.c.obj
-
-terminal.i: terminal.c.i
-.PHONY : terminal.i
-
-# target to preprocess a source file
-terminal.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/terminal.c.i
-.PHONY : terminal.c.i
-
-terminal.s: terminal.c.s
-.PHONY : terminal.s
-
-# target to generate assembly for a file
-terminal.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\pay.dir\build.make CMakeFiles/pay.dir/terminal.c.s
-.PHONY : terminal.c.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -233,18 +257,21 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... pay
-	@echo ... card.obj
-	@echo ... card.i
-	@echo ... card.s
+	@echo ... Application/app.obj
+	@echo ... Application/app.i
+	@echo ... Application/app.s
+	@echo ... Card/card.obj
+	@echo ... Card/card.i
+	@echo ... Card/card.s
+	@echo ... Server/server.obj
+	@echo ... Server/server.i
+	@echo ... Server/server.s
+	@echo ... Terminal/terminal.obj
+	@echo ... Terminal/terminal.i
+	@echo ... Terminal/terminal.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... server.obj
-	@echo ... server.i
-	@echo ... server.s
-	@echo ... terminal.obj
-	@echo ... terminal.i
-	@echo ... terminal.s
 .PHONY : help
 
 

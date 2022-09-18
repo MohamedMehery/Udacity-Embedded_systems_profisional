@@ -83,70 +83,87 @@ CMakeFiles/pay.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/main.c.s"
 	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\main.c" -o CMakeFiles\pay.dir\main.c.s
 
-CMakeFiles/pay.dir/card.c.obj: CMakeFiles/pay.dir/flags.make
-CMakeFiles/pay.dir/card.c.obj: CMakeFiles/pay.dir/includes_C.rsp
-CMakeFiles/pay.dir/card.c.obj: ../card.c
-CMakeFiles/pay.dir/card.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pay.dir/card.c.obj"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/card.c.obj -MF CMakeFiles\pay.dir\card.c.obj.d -o CMakeFiles\pay.dir\card.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\card.c"
+CMakeFiles/pay.dir/Card/card.c.obj: CMakeFiles/pay.dir/flags.make
+CMakeFiles/pay.dir/Card/card.c.obj: CMakeFiles/pay.dir/includes_C.rsp
+CMakeFiles/pay.dir/Card/card.c.obj: ../Card/card.c
+CMakeFiles/pay.dir/Card/card.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/pay.dir/Card/card.c.obj"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/Card/card.c.obj -MF CMakeFiles\pay.dir\Card\card.c.obj.d -o CMakeFiles\pay.dir\Card\card.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Card\card.c"
 
-CMakeFiles/pay.dir/card.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/card.c.i"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\card.c" > CMakeFiles\pay.dir\card.c.i
+CMakeFiles/pay.dir/Card/card.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/Card/card.c.i"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Card\card.c" > CMakeFiles\pay.dir\Card\card.c.i
 
-CMakeFiles/pay.dir/card.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/card.c.s"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\card.c" -o CMakeFiles\pay.dir\card.c.s
+CMakeFiles/pay.dir/Card/card.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/Card/card.c.s"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Card\card.c" -o CMakeFiles\pay.dir\Card\card.c.s
 
-CMakeFiles/pay.dir/terminal.c.obj: CMakeFiles/pay.dir/flags.make
-CMakeFiles/pay.dir/terminal.c.obj: CMakeFiles/pay.dir/includes_C.rsp
-CMakeFiles/pay.dir/terminal.c.obj: ../terminal.c
-CMakeFiles/pay.dir/terminal.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pay.dir/terminal.c.obj"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/terminal.c.obj -MF CMakeFiles\pay.dir\terminal.c.obj.d -o CMakeFiles\pay.dir\terminal.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\terminal.c"
+CMakeFiles/pay.dir/Terminal/terminal.c.obj: CMakeFiles/pay.dir/flags.make
+CMakeFiles/pay.dir/Terminal/terminal.c.obj: CMakeFiles/pay.dir/includes_C.rsp
+CMakeFiles/pay.dir/Terminal/terminal.c.obj: ../Terminal/terminal.c
+CMakeFiles/pay.dir/Terminal/terminal.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/pay.dir/Terminal/terminal.c.obj"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/Terminal/terminal.c.obj -MF CMakeFiles\pay.dir\Terminal\terminal.c.obj.d -o CMakeFiles\pay.dir\Terminal\terminal.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Terminal\terminal.c"
 
-CMakeFiles/pay.dir/terminal.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/terminal.c.i"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\terminal.c" > CMakeFiles\pay.dir\terminal.c.i
+CMakeFiles/pay.dir/Terminal/terminal.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/Terminal/terminal.c.i"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Terminal\terminal.c" > CMakeFiles\pay.dir\Terminal\terminal.c.i
 
-CMakeFiles/pay.dir/terminal.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/terminal.c.s"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\terminal.c" -o CMakeFiles\pay.dir\terminal.c.s
+CMakeFiles/pay.dir/Terminal/terminal.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/Terminal/terminal.c.s"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Terminal\terminal.c" -o CMakeFiles\pay.dir\Terminal\terminal.c.s
 
-CMakeFiles/pay.dir/server.c.obj: CMakeFiles/pay.dir/flags.make
-CMakeFiles/pay.dir/server.c.obj: CMakeFiles/pay.dir/includes_C.rsp
-CMakeFiles/pay.dir/server.c.obj: ../server.c
-CMakeFiles/pay.dir/server.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pay.dir/server.c.obj"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/server.c.obj -MF CMakeFiles\pay.dir\server.c.obj.d -o CMakeFiles\pay.dir\server.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\server.c"
+CMakeFiles/pay.dir/Server/server.c.obj: CMakeFiles/pay.dir/flags.make
+CMakeFiles/pay.dir/Server/server.c.obj: CMakeFiles/pay.dir/includes_C.rsp
+CMakeFiles/pay.dir/Server/server.c.obj: ../Server/server.c
+CMakeFiles/pay.dir/Server/server.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/pay.dir/Server/server.c.obj"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/Server/server.c.obj -MF CMakeFiles\pay.dir\Server\server.c.obj.d -o CMakeFiles\pay.dir\Server\server.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Server\server.c"
 
-CMakeFiles/pay.dir/server.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/server.c.i"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\server.c" > CMakeFiles\pay.dir\server.c.i
+CMakeFiles/pay.dir/Server/server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/Server/server.c.i"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Server\server.c" > CMakeFiles\pay.dir\Server\server.c.i
 
-CMakeFiles/pay.dir/server.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/server.c.s"
-	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\server.c" -o CMakeFiles\pay.dir\server.c.s
+CMakeFiles/pay.dir/Server/server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/Server/server.c.s"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Server\server.c" -o CMakeFiles\pay.dir\Server\server.c.s
+
+CMakeFiles/pay.dir/Application/app.c.obj: CMakeFiles/pay.dir/flags.make
+CMakeFiles/pay.dir/Application/app.c.obj: CMakeFiles/pay.dir/includes_C.rsp
+CMakeFiles/pay.dir/Application/app.c.obj: ../Application/app.c
+CMakeFiles/pay.dir/Application/app.c.obj: CMakeFiles/pay.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/pay.dir/Application/app.c.obj"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/pay.dir/Application/app.c.obj -MF CMakeFiles\pay.dir\Application\app.c.obj.d -o CMakeFiles\pay.dir\Application\app.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Application\app.c"
+
+CMakeFiles/pay.dir/Application/app.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pay.dir/Application/app.c.i"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Application\app.c" > CMakeFiles\pay.dir\Application\app.c.i
+
+CMakeFiles/pay.dir/Application/app.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pay.dir/Application/app.c.s"
+	C:\TDM-GCC-64\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\Application\app.c" -o CMakeFiles\pay.dir\Application\app.c.s
 
 # Object files for target pay
 pay_OBJECTS = \
 "CMakeFiles/pay.dir/main.c.obj" \
-"CMakeFiles/pay.dir/card.c.obj" \
-"CMakeFiles/pay.dir/terminal.c.obj" \
-"CMakeFiles/pay.dir/server.c.obj"
+"CMakeFiles/pay.dir/Card/card.c.obj" \
+"CMakeFiles/pay.dir/Terminal/terminal.c.obj" \
+"CMakeFiles/pay.dir/Server/server.c.obj" \
+"CMakeFiles/pay.dir/Application/app.c.obj"
 
 # External object files for target pay
 pay_EXTERNAL_OBJECTS =
 
 pay.exe: CMakeFiles/pay.dir/main.c.obj
-pay.exe: CMakeFiles/pay.dir/card.c.obj
-pay.exe: CMakeFiles/pay.dir/terminal.c.obj
-pay.exe: CMakeFiles/pay.dir/server.c.obj
+pay.exe: CMakeFiles/pay.dir/Card/card.c.obj
+pay.exe: CMakeFiles/pay.dir/Terminal/terminal.c.obj
+pay.exe: CMakeFiles/pay.dir/Server/server.c.obj
+pay.exe: CMakeFiles/pay.dir/Application/app.c.obj
 pay.exe: CMakeFiles/pay.dir/build.make
 pay.exe: CMakeFiles/pay.dir/linklibs.rsp
 pay.exe: CMakeFiles/pay.dir/objects1.rsp
 pay.exe: CMakeFiles/pay.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable pay.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\PaymentApplication\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable pay.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\pay.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

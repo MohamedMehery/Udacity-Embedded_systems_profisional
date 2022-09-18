@@ -6,12 +6,12 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t * termData)
     EN_terminalError_t result = WRONG_DATE;
 
     int len = strlen(termData->transactionDate);
-    if ((len == 10) && ((termData->transactionDate!=0))) 
+    if ((len == 10) && ((termData->transactionDate!=0)))
     {
         if((termData->transactionDate[2] != ('/')) && termData->transactionDate[5] != ('/')){
             return result ;
             }
-        int month = ( (termData->transactionDate[3] - '0')*10 + (termData->transactionDate[4]-'0') );        
+        int month = ( (termData->transactionDate[3] - '0')*10 + (termData->transactionDate[4]-'0') );
         int day = ( (termData->transactionDate[0] - '0')*10 + (termData->transactionDate[1]-'0') );
         int year = ( (termData->transactionDate[8] - '0')*10 + (termData->transactionDate[9]-'0') );
         if((month < 1) || (month > 12)){
@@ -22,7 +22,7 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t * termData)
         }
         if((day < 1) || (day>31) ){
             return result;
-        }        
+        }
         result = OK;
         return result;
 
@@ -33,26 +33,25 @@ EN_terminalError_t getTransactionDate(ST_terminalData_t * termData)
     }
 }
 
+
 EN_terminalError_t isCardExpired(ST_cardData_t* cardData , ST_terminalData_t* termData)
 {
-    int termDatamonth = ( (termData->transactionDate[3] - '0')*10 + (termData->transactionDate[4]-'0') );        
-    int termDatayear = ( (termData->transactionDate[9] - '0')*10 + (termData->transactionDate[10]-'0') );
-    int cardDatamonth = ( (cardData->cardExpirationDate[0] - '0')*10 + (cardData->cardExpirationDate[1]-'0') );        
-    int cardDatayear = ( (cardData->cardExpirationDate[3] - '0')*10 + (cardData->cardExpirationDate[4]-'0') );    
-
+    int termDatamonth = ( (termData->transactionDate[3] - '0')*10 + (termData->transactionDate[4]-'0') );
+    int termDatayear = ( (termData->transactionDate[8] - '0')*10 + (termData->transactionDate[9]-'0') );
+    int cardDatamonth = ( (cardData->cardExpirationDate[0] - '0')*10 + (cardData->cardExpirationDate[1]-'0') );
+    int cardDatayear = ( (cardData->cardExpirationDate[3] - '0')*10 + (cardData->cardExpirationDate[4]-'0') );
     EN_terminalError_t result = EXPIRED_CARD;
     if( cardDatayear < termDatayear )return result;
-    if( cardDatamonth < termDatamonth )return result;
+    if( cardDatamonth < termDatamonth && (cardDatayear == termDatayear))return result;
     result = OK;
     return result;
 }
-
 EN_terminalError_t getTransactionAmount(ST_terminalData_t * termData)
 {
     EN_terminalError_t result = INVALID_AMOUNT;
     if( termData->transAmount <= 0.0f)return result;
     result = OK;
-    return result;    
+    return result;
 }
 
 EN_terminalError_t isBelowMaxAmount(ST_terminalData_t * termData)
@@ -60,7 +59,7 @@ EN_terminalError_t isBelowMaxAmount(ST_terminalData_t * termData)
     EN_terminalError_t result = EXCEED_MAX_AMOUNT;
     if( termData->transAmount > termData->maxTransAmount)return result;
     result = OK;
-    return result;    
+    return result;
 
 }
 
@@ -69,7 +68,7 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
     EN_terminalError_t result = INVALID_MAX_AMOUNT;
     if( termData->transAmount <= 0.0f)return result;
     result = OK;
-    return result;    
+    return result;
 }
 
 // test gettransactionDate
@@ -91,7 +90,7 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     outputs[0] = getTransactionDate(&inputs[0]);
 //     outputs[1] = getTransactionDate(&inputs[1]);
 //     outputs[2] = getTransactionDate(&inputs[2]);
-//     outputs[3] = getTransactionDate(&inputs[3]);   
+//     outputs[3] = getTransactionDate(&inputs[3]);
 //     for(int i = 0 ; i < 4 ; i++)
 //     {
 //         switch (outputs[i])
@@ -99,13 +98,13 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //         case WRONG_DATE:
 //                 printf("WRONG_DATE\n");
 //             break;
-        
+
 //         default:
 //                 printf("OK\n");
 //             break;
 //         }
 //     }
-    
+
 //     return 0;
 // }
 
@@ -135,14 +134,14 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     strcpy(termdates[0].cardExpirationDate , termdate[0]);
 //     strcpy(termdates[1].cardExpirationDate , termdate[1]);
 //     strcpy(termdates[2].cardExpirationDate , termdate[2]);
-//     strcpy(termdates[3].cardExpirationDate , termdate[3]);    
+//     strcpy(termdates[3].cardExpirationDate , termdate[3]);
 
 //     EN_terminalError_t outputs[4] = {OK};
 //     outputs[0] = isCardExpired(&termdates[0], &carddates[0]);
 //     outputs[1] = isCardExpired(&termdates[1], &carddates[1]);
 //     outputs[2] = isCardExpired(&termdates[2], &carddates[2]);
 //     outputs[3] = isCardExpired(&termdates[3], &carddates[3]);
-    
+
 //     for(int i = 0 ; i < 4 ; i++)
 //     {
 //         switch (outputs[i])
@@ -150,13 +149,13 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //         case EXPIRED_CARD:
 //                 printf("EXPIRED_CARD\n");
 //             break;
-        
+
 //         default:
 //                 printf("OK\n");
 //             break;
 //         }
 //     }
-    
+
 //     return 0;
 // }
 
@@ -174,7 +173,7 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     outputs[0] = getTransactionAmount(&inputs[0]);
 //     outputs[1] = getTransactionAmount(&inputs[1]);
 //     outputs[2] = getTransactionAmount(&inputs[2]);
-//     outputs[3] = getTransactionAmount(&inputs[3]);   
+//     outputs[3] = getTransactionAmount(&inputs[3]);
 //     for(int i = 0 ; i < 4 ; i++)
 //     {
 //         switch (outputs[i])
@@ -182,13 +181,13 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //         case INVALID_AMOUNT:
 //                 printf("INVALID_AMOUNT\n");
 //             break;
-        
+
 //         default:
 //                 printf("OK\n");
 //             break;
 //         }
 //     }
-    
+
 //     return 0;
 // }
 
@@ -212,7 +211,7 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     outputs[0] = isBelowMaxAmount(&inputs[0]);
 //     outputs[1] = isBelowMaxAmount(&inputs[1]);
 //     outputs[2] = isBelowMaxAmount(&inputs[2]);
-//     outputs[3] = isBelowMaxAmount(&inputs[3]);   
+//     outputs[3] = isBelowMaxAmount(&inputs[3]);
 //     for(int i = 0 ; i < 4 ; i++)
 //     {
 //         switch (outputs[i])
@@ -220,13 +219,13 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //         case EXCEED_MAX_AMOUNT:
 //                 printf("EXCEED_MAX_AMOUNT\n");
 //             break;
-        
+
 //         default:
 //                 printf("OK\n");
 //             break;
 //         }
 //     }
-    
+
 //     return 0;
 // }
 
@@ -243,7 +242,7 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //     outputs[0] = setMaxAmount(&inputs[0]);
 //     outputs[1] = setMaxAmount(&inputs[1]);
 //     outputs[2] = setMaxAmount(&inputs[2]);
-//     outputs[3] = setMaxAmount(&inputs[3]);   
+//     outputs[3] = setMaxAmount(&inputs[3]);
 //     for(int i = 0 ; i < 4 ; i++)
 //     {
 //         switch (outputs[i])
@@ -251,13 +250,13 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 //         case INVALID_MAX_AMOUNT:
 //                 printf("INVALID_MAX_AMOUNT\n");
 //             break;
-        
+
 //         default:
 //                 printf("OK\n");
 //             break;
 //         }
 //     }
-    
+
 //     return 0;
 // }
 

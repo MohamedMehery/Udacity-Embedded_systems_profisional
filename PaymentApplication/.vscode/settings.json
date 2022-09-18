@@ -1,0 +1,13 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "terminal.h": "c",
+        "card.h": "c",
+        "array": "c",
+        "app.h": "c",
+        "server.h": "c",
+        "main.h": "c",
+        "mohamed.h": "c",
+        "stdio.h": "c"
+    }
+}

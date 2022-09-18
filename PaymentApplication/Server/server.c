@@ -52,6 +52,7 @@ EN_serverError_t isValidAccount(ST_cardData_t* cardData)
 			break;
 		}
 	}
+	
 	if (!is_exist) {
 		return DECLINED_STOLEN_CARD;
 	}

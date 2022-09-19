@@ -53,10 +53,16 @@ EN_cardError_t  getCardExpiryDate(ST_cardData_t *cardData)
 
 EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 {
-    EN_cardError_t result = OK;
+    int i;    EN_cardError_t result = WRONG_PAN;
+
+    for(i = 0 ; i < strlen(cardData->primaryAccountNumber) ; i++)
+    {
+        if( (cardData->primaryAccountNumber[i] > '9') || (cardData->primaryAccountNumber[i] < '0'))
+        return result;
+    }
+
     if(!cardData->primaryAccountNumber)
     {
-        result = WRONG_PAN;
         return result;
     }
     else
@@ -68,7 +74,7 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
             return result;
         }
     }
-
+    result = OK;
     return result;
 }
 

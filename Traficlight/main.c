@@ -1,5 +1,14 @@
 #include "main.h"
+// #define LEDTOGGLETEST
 
+
+int main()
+{
+
+    return 0;
+}
+
+#ifdef LEDTOGGLETEST
 int main()
 {
     GPIO_init(PORT_A, 0 , OUT);
@@ -10,3 +19,4 @@ int main()
     }
     return 0;
 }
+#endif

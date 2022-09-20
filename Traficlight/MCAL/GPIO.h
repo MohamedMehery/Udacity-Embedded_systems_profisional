@@ -18,6 +18,11 @@
 #define LOW 0 
 #define HIGH 1
 
+#define CLEAR_BIT(REG,NUM) REG&=~(1<<NUM)
+#define SET_BIT(REG,NUM) REG|=(1<<NUM)
+#define TOGGLE_BIT(REG,NUM) REG^=(1<<NUM)
+#define READ_BIT(REG,NUM) ((REG&(1<<NUM))>>NUM)
+
 
 void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction);// Initialize GPIO direction
 void GPIO_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value); //write data to GPIO

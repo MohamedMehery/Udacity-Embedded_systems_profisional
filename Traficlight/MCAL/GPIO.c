@@ -1,7 +1,6 @@
 
 #include "GPIO.h"
 
-
 void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction)
 {
 	switch(portNumber){

@@ -5,22 +5,25 @@ set(CMAKE_CXX_COMPILER avr-g++ CACHE STRING "C++ compiler" FORCE)
 set(CMAKE_C_COMPILER avr-gcc CACHE STRING "C Complier" FORCE)
 Set(CMAKE_OBJCOPY avr-objcopy CACHE STRING "avr objcopy" FORCE)
 
-set(CMAKE_CXX_FLAGS "-mmcu=atmega32 -01 -DF_CPU=1000000UL")
+#set(CMAKE_CXX_FLAGS "-mmcu=atmega32 -O1 -DF_CPU=1000000UL")#compiler take the flags to substitute to run
+set(CMAKE_C_FLAGS "-mmcu=atmega32 -O1 -DF_CPU=1000000UL")#compiler take the flags to substitute to run
 
 project(traficlight)
 
 set(SRCS    main.c
-            \MCAL\)
-set(INCS    main.h
-            \MCAL\)            
-message("Source files are:\n${SRCS}")
+            ./MCAL/GPIO.c
+            ./MCAL/TIMER.c)
 
-target_include_directories(${PROJECT_NAME}.elf PUBLIC ${INCS})
-message("Include files are:\n${INCS}")
+set(INCS MCAL/)            
+
+# message("Source files are:\n${SRCS}")
 
 add_executable(${PROJECT_NAME}.elf ${SRCS})
+target_include_directories(${PROJECT_NAME}.elf PUBLIC ${INCS})
+# message("Include files are:\n${INCS}")
+
 #fromating
-message("${FLASH_FLAGS}")
+# message("${FLASH_FLAGS}")
 add_custom_target(flash ALL     #add flash target to overall target
                 DEPENDS ${PROJECT_NAME}.elf
                 COMMAND avr-objcopy -j .text -j .data -O ihex ${PROJECT_NAME}.elf ${PROJECT_NAME}.hex)       

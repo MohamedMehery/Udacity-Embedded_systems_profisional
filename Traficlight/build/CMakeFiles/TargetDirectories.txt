@@ -1,0 +1,4 @@
+C:/Users/Mohamed Mehery/Documents/GitHub/Udacity-Embedded_systems_profisional/Traficlight/build/CMakeFiles/traficlight.elf.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Udacity-Embedded_systems_profisional/Traficlight/build/CMakeFiles/flash.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Udacity-Embedded_systems_profisional/Traficlight/build/CMakeFiles/edit_cache.dir
+C:/Users/Mohamed Mehery/Documents/GitHub/Udacity-Embedded_systems_profisional/Traficlight/build/CMakeFiles/rebuild_cache.dir

@@ -30,8 +30,7 @@ CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj: ../MCAL/TIMER.c \
   C:/WinAVR-20100110/avr/include/avr/fuse.h \
   C:/WinAVR-20100110/avr/include/avr/lock.h \
   C:/WinAVR-20100110/avr/include/util/delay.h \
-  C:/WinAVR-20100110/avr/include/util/delay_basic.h \
-  C:/WinAVR-20100110/avr/include/math.h
+  C:/WinAVR-20100110/avr/include/util/delay_basic.h
 
 CMakeFiles/traficlight.elf.dir/main.c.obj: ../main.c \
   ../main.h \
@@ -85,7 +84,5 @@ C:/WinAVR-20100110/avr/include/util/delay_basic.h:
 ../MCAL/TIMER.c:
 
 ../MCAL/TIMER.h:
-
-C:/WinAVR-20100110/avr/include/math.h:
 
 ../main.c:

@@ -33,7 +33,6 @@ CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj
  C:/WinAVR-20100110/avr/include/avr/lock.h
  C:/WinAVR-20100110/avr/include/util/delay.h
  C:/WinAVR-20100110/avr/include/util/delay_basic.h
- C:/WinAVR-20100110/avr/include/math.h
 
 CMakeFiles/traficlight.elf.dir/main.c.obj
  C:/Users/Mohamed Mehery/Documents/GitHub/Udacity-Embedded_systems_profisional/Traficlight/main.c

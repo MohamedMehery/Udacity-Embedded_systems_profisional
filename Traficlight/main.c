@@ -1,12 +1,6 @@
 #include "main.h"
-// #define LEDTOGGLETEST
+#define LEDTOGGLETEST
 
-
-int main()
-{
-
-    return 0;
-}
 
 #ifdef LEDTOGGLETEST
 int main()
@@ -15,7 +9,7 @@ int main()
     while(1)
     {
         TOGGLE_BIT(PORTA , 0);
-        _delay_ms(1000);
+        TIMER_delay(1000);
     }
     return 0;
 }

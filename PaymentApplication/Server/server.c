@@ -28,7 +28,8 @@ EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 
 EN_serverError_t isValidAccount(ST_cardData_t* cardData)
 {
-	uint8_t* PAN =cardData->primaryAccountNumber;
+	#define PAN  cardData->primaryAccountNumber
+	int strl = strlen(cardData->primaryAccountNumber);
 	//linear search through AccountsDB
 	int is_exist = 0;
 	int i, j;
@@ -36,7 +37,7 @@ EN_serverError_t isValidAccount(ST_cardData_t* cardData)
 		//if not empty(no more records)
 		if (accounts[i].primaryAccountNumber[0] != '\0') {
 			int equal = 1;
-			for (j = 0; j < 20; j++) {
+			for (j = 0; j < strl; j++) {
 				if (accounts[i].primaryAccountNumber[j] != PAN[j]) {
 					equal = 0;
 					break;
@@ -49,12 +50,12 @@ EN_serverError_t isValidAccount(ST_cardData_t* cardData)
 			}
 		}
 		else {
-			break;
+			//break;
 		}
 	}
 	
 	if (!is_exist) {
-		return DECLINED_STOLEN_CARD;
+		return ACCOUNT_NOT_FOUND;
 	}
 	return OK_server;
 }

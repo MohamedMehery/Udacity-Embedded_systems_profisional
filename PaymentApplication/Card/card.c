@@ -55,12 +55,6 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 {
     int i;    EN_cardError_t result = WRONG_PAN;
 
-    for(i = 0 ; i < strlen(cardData->primaryAccountNumber) ; i++)
-    {
-        if( (cardData->primaryAccountNumber[i] > '9') || (cardData->primaryAccountNumber[i] < '0'))
-        return result;
-    }
-
     if(!cardData->primaryAccountNumber)
     {
         return result;

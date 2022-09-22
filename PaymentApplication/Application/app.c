@@ -6,7 +6,7 @@ extern int account_index;
 
 static int transnumber ;
 
-void Readconcil(char* cardholdername ,
+void Readconcel(char* cardholdername ,
 				char* cardexpiredate,
 				char* PAN,
 				char* transdate,
@@ -33,13 +33,10 @@ void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transac
 	char PAN[20] = {0};
 	char transdate[11] = {0};
 	float transamount = 0.0f;
-	Readconcil(cardholdername , cardexpirationdate,PAN , transdate, &transamount);
+	Readconcel(cardholdername , cardexpirationdate,PAN , transdate, &transamount);
 
 	//transaction fill data
-	transdata->cardHolderData = *cardData;
-	transdata->terminalData = *termData;
-	transdata->transactionSequenceNumber = transnumber++;
-	trans[account_index] = *transdata;
+
 
 	// fill cardData
 	strcpy(cardData->cardHolderName ,cardholdername);
@@ -56,10 +53,13 @@ void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transac
 	termData->transAmount = transamount;
     //account fill account balance
     accounts[account_index].balance = 5000.0f;
+    strcpy(accounts[account_index].primaryAccountNumber , "0123456789012345678");
+	
+	transdata->cardHolderData = *cardData;
+	transdata->terminalData = *termData;	
+	transdata->transactionSequenceNumber = transnumber++;
+	trans[account_index] = *transdata;
 
-    strcpy(accounts[account_index].primaryAccountNumber , cardData->cardExpirationDate);
-    trans[account_index].cardHolderData = *cardData;
-    trans[account_index].terminalData = *termData;
 }
 
 void appStart(void)

@@ -41,5 +41,5 @@ EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transacti
 
 extern ST_accountsDB_t accounts[255] ;
 extern ST_transaction_t trans[255] ;
-
+extern int account_index;
 #endif

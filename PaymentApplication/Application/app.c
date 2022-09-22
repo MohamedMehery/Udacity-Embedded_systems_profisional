@@ -4,24 +4,59 @@ extern ST_accountsDB_t accounts[255];
 extern ST_transaction_t trans[255];
 extern int account_index;
 
-// valid data
-void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData)
-{
-	// fill cardData
-	strcpy(cardData->cardHolderName , "01234567890123456789");
-	//fill expiry date
-	strcpy(cardData->cardExpirationDate , "05/26");
-	//fill cardPAN
-	strcpy(cardData->primaryAccountNumber , "0123456789012345");
+static int transnumber ;
 
-	//setMaxAmount
-	termData->maxTransAmount = 500.02f;
+void Readconcil(char* cardholdername ,
+				char* cardexpiredate,
+				char* PAN,
+				char* transdate,
+				float* transamount)
+{
+	printf("Enter card holder name\n");
+	scanf("%s",cardholdername);
+	printf("Enter card expiration date\n");
+	scanf("%s",cardexpiredate);
+	printf("Enter card PAN\n");
+	scanf("%s",PAN);
+	printf("Enter transaction date\n");
+	scanf("%s",transdate);	
+	printf("Enter transaction amount\n");
+	scanf("%f",transamount);	
+}
+
+// valid data
+void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transaction_t* transdata)
+{
+
+	char cardholdername[25] = {0};
+	char cardexpirationdate[6] = {0};
+	char PAN[20] = {0};
+	char transdate[11] = {0};
+	float transamount = 0.0f;
+	Readconcil(cardholdername , cardexpirationdate,PAN , transdate, &transamount);
+
+	//transaction fill data
+	transdata->cardHolderData = *cardData;
+	transdata->terminalData = *termData;
+	transdata->transactionSequenceNumber = transnumber++;
+	trans[account_index] = *transdata;
+
+	// fill cardData
+	strcpy(cardData->cardHolderName ,cardholdername);
+	//fill expiry date
+	strcpy(cardData->cardExpirationDate , cardexpirationdate);
+	//fill cardPAN
+	strcpy(cardData->primaryAccountNumber , PAN);
+
+	//setMaxAmount for ATM machine
+	termData->maxTransAmount = 20000.0f;
 	//setTransactionDate
-	strcpy(termData->transactionDate , "25/06/2022");
+	strcpy(termData->transactionDate , transdate);
 	//set transamount
-	termData->transAmount = 432.3f;
-    //account fill
-    accounts[account_index].balance = termData->maxTransAmount;
+	termData->transAmount = transamount;
+    //account fill account balance
+    accounts[account_index].balance = 5000.0f;
+
     strcpy(accounts[account_index].primaryAccountNumber , cardData->cardExpirationDate);
     trans[account_index].cardHolderData = *cardData;
     trans[account_index].terminalData = *termData;
@@ -35,7 +70,7 @@ void appStart(void)
 	ST_transaction_t transData;
 	EN_terminalError_t terminal_error;
 
-	fill_data(&cardData , &termData);
+	fill_data(&cardData , &termData , &transData);
 
 	EN_cardError_t card_status = getCardHolderName(&cardData);
 
@@ -78,8 +113,6 @@ void appStart(void)
 		printf("EXCEED_MAX_AMOUNT\n");
 		return;
 	}
-	transData.cardHolderData = cardData;
-	transData.terminalData = termData;
 
 	EN_transState_t transtate = recieveTransactionData(&transData);
     EN_serverError_t save_error =  saveTransaction(&transData);

@@ -14,7 +14,8 @@ typedef unsigned int uint32_t;
 void appStart(void);
 void fill_data(
 	ST_cardData_t* cardData,
-	ST_terminalData_t* termData
+	ST_terminalData_t* termData,
+	ST_transaction_t * transdata
 );
 
 

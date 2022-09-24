@@ -3,6 +3,6 @@
 
 #include "MCAL/GPIO.h"
 #include "MCAL/TIMER.h"
-
+#include "MCAL/INT.h"
 
 #endif

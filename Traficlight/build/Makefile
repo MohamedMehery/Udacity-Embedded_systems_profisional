@@ -165,6 +165,30 @@ MCAL/GPIO.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.s
 .PHONY : MCAL/GPIO.c.s
 
+MCAL/INT.obj: MCAL/INT.c.obj
+.PHONY : MCAL/INT.obj
+
+# target to build an object file
+MCAL/INT.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj
+.PHONY : MCAL/INT.c.obj
+
+MCAL/INT.i: MCAL/INT.c.i
+.PHONY : MCAL/INT.i
+
+# target to preprocess a source file
+MCAL/INT.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.i
+.PHONY : MCAL/INT.c.i
+
+MCAL/INT.s: MCAL/INT.c.s
+.PHONY : MCAL/INT.s
+
+# target to generate assembly for a file
+MCAL/INT.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.s
+.PHONY : MCAL/INT.c.s
+
 MCAL/TIMER.obj: MCAL/TIMER.c.obj
 .PHONY : MCAL/TIMER.obj
 
@@ -226,6 +250,9 @@ help:
 	@echo ... MCAL/GPIO.obj
 	@echo ... MCAL/GPIO.i
 	@echo ... MCAL/GPIO.s
+	@echo ... MCAL/INT.obj
+	@echo ... MCAL/INT.i
+	@echo ... MCAL/INT.s
 	@echo ... MCAL/TIMER.obj
 	@echo ... MCAL/TIMER.i
 	@echo ... MCAL/TIMER.s

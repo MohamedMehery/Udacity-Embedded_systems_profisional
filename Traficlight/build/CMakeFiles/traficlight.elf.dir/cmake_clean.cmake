@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.obj"
   "CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.obj.d"
+  "CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj"
+  "CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj.d"
   "CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj"
   "CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj.d"
   "CMakeFiles/traficlight.elf.dir/main.c.obj"

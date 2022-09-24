@@ -12,7 +12,8 @@ project(traficlight)
 
 set(SRCS    main.c
             ./MCAL/GPIO.c
-            ./MCAL/TIMER.c)
+            ./MCAL/TIMER.c
+            ./MCAL/INT.c)
 
 set(INCS MCAL/)            
 

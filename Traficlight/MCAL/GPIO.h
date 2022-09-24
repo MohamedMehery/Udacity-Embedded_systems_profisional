@@ -5,7 +5,8 @@
 
 #define F_CPU 1000000UL
 #include <avr/io.h>
-#include <util/delay.h>
+// #include <util/delay.h>
+#include <avr/interrupt.h>
 
 #define PORT_A 'A'
 #define PORT_B 'B'

@@ -19,7 +19,12 @@ CMakeFiles/traficlight.elf.dir/Application/app.c.obj: ../Application/app.c \
   ../MCAL/GPIO.h \
   ../HAL/LED.h \
   ../MCAL/GPIO.h \
-  ../MCAL/TIMER.h
+  ../MCAL/TIMER.h \
+  ../main.h \
+  ../MCAL/GPIO.h \
+  ../MCAL/TIMER.h \
+  ../MCAL/INT.h \
+  ../Application/app.h
 
 CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj: ../HAL/LED.c \
   ../HAL/LED.h \
@@ -104,7 +109,8 @@ CMakeFiles/traficlight.elf.dir/main.c.obj: ../main.c \
   ../MCAL/TIMER.h \
   ../HAL/LED.h \
   ../MCAL/GPIO.h \
-  ../MCAL/TIMER.h
+  ../MCAL/TIMER.h \
+  ../main.h
 
 
 ../MCAL/TIMER.h:
@@ -141,14 +147,14 @@ C:/WinAVR-20100110/avr/include/avr/lock.h:
 
 ../HAL/LED.h:
 
+../main.h:
+
+../MCAL/INT.h:
+
 ../HAL/LED.c:
 
 ../MCAL/GPIO.c:
 
 ../MCAL/INT.c:
 
-../MCAL/INT.h:
-
 ../main.c:
-
-../main.h:

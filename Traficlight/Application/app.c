@@ -27,21 +27,23 @@ void HAL_init(void){
 void Handlepedestrian(void)
 {
 // Handle the Pedestrian mode
-	uint8_t iter;
+	uint8_t iter, carledred = 0;
 	//car red light is off
-	LED_off(LED_CAR_PORT,LED_CAR_R_PIN);
+
+	//LED_off(LED_CAR_PORT,LED_CAR_R_PIN);
+
 	// LED_on(PORT_C,PIN0);	//turn on debug led
 	
 	//blink both yellow while ped green is on
 	for(iter=0;iter<5;iter++)
 	{
-		LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
+		if(carLED<2)LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
 		LED_on(LED_PED_PORT,LED_PED_Y_PIN);
 		TIMER_delay(250);
-		LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
+		if(carLED<2)LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
 		LED_off(LED_PED_PORT,LED_PED_Y_PIN);
 		TIMER_delay(500);
-		LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
+		if(carLED<2)LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
 		LED_on(LED_PED_PORT,LED_PED_Y_PIN);
 		TIMER_delay(250);
 	}

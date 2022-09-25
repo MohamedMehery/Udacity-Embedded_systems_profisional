@@ -1,20 +1,19 @@
 #include "main.h"
-#define LEDTOGGLETEST
-// #define APP
 
 
 #ifdef APP
-
 int main()
 {
+	//Initialize
+    HAL_init();
+    // LED_init(PORT_C , PIN0);    //debug led
+
+	//Main loop
+	while(1){
+		appStart();
+	}
     
-    while(1)
-    {
-
-    }
-    return 0;
 }
-
 #endif
 
 
@@ -32,8 +31,12 @@ int main()
 }
 #endif
 
+#ifdef LEDTOGGLETEST
+
 /*Interrupt Service Routine for INT0*/
 ISR(INT0_vect)
 {
     TOGGLE_BIT(PORTA , 0);    
+    SET_BIT(PORTD , 2);
 }
+#endif

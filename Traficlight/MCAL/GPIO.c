@@ -10,9 +10,7 @@ void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction)
 			}else if (direction == OUT){
 				SET_BIT(DDRA,pinNumber);
 			}
-			else{
-				//error handling
-			}
+
 			break;
 		case PORT_B:
 			if(direction == IN){
@@ -20,9 +18,7 @@ void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction)
 			}else if (direction == OUT){
 				SET_BIT(DDRB,pinNumber);
 			}
-			else{
-				//error handling
-			}
+
 			break;
 		case PORT_C:
 			if(direction == IN){
@@ -30,9 +26,7 @@ void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction)
 			}else if (direction == OUT){
 				SET_BIT(DDRC,pinNumber);
 			}
-			else{
-				//error handling
-			}
+
 			break;
 		case PORT_D:
 			if(direction == IN){
@@ -40,9 +34,7 @@ void GPIO_init(uint8_t portNumber, uint8_t pinNumber, uint8_t direction)
 			}else if (direction == OUT){
 				SET_BIT(DDRD,pinNumber);
 			}
-			else{
-				//error handling
-			}
+
 			break;
 	}
 }
@@ -55,9 +47,7 @@ void GPIO_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value)
 			}else if (value == HIGH){
 				SET_BIT(PORTA,pinNumber);
 			}
-			else{
-				//error handling
-			}
+
 		break;
 		case PORT_B:
 			if(value == LOW){
@@ -65,9 +55,7 @@ void GPIO_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value)
 			}else if (value == HIGH){
 				SET_BIT(PORTB,pinNumber);
 			}
-			else{
-				//error
-			}
+
 		break;
 		case PORT_C:
 			if(value == LOW){
@@ -75,9 +63,7 @@ void GPIO_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value)
 			}else if (value == HIGH){
 				SET_BIT(PORTC,pinNumber);
 			}
-			else{
-				//error
-			}
+
 		break;
 		case PORT_D:
 			if(value == LOW){
@@ -85,9 +71,7 @@ void GPIO_write(uint8_t portNumber, uint8_t pinNumber, uint8_t value)
 			}else if (value == HIGH){
 				SET_BIT(PORTD,pinNumber);
 			}
-			else{
-				//error
-			}
+
 		break;
 	}
 }

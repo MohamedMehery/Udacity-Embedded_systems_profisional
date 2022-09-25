@@ -124,12 +124,42 @@ CMakeFiles/traficlight.elf.dir/MCAL/INT.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traficlight.elf.dir/MCAL/INT.c.s"
 	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\MCAL\INT.c" -o CMakeFiles\traficlight.elf.dir\MCAL\INT.c.s
 
+CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj: CMakeFiles/traficlight.elf.dir/flags.make
+CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj: ../HAL/LED.c
+CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj: CMakeFiles/traficlight.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj -MF CMakeFiles\traficlight.elf.dir\HAL\LED.c.obj.d -o CMakeFiles\traficlight.elf.dir\HAL\LED.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\HAL\LED.c"
+
+CMakeFiles/traficlight.elf.dir/HAL/LED.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/traficlight.elf.dir/HAL/LED.c.i"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\HAL\LED.c" > CMakeFiles\traficlight.elf.dir\HAL\LED.c.i
+
+CMakeFiles/traficlight.elf.dir/HAL/LED.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traficlight.elf.dir/HAL/LED.c.s"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\HAL\LED.c" -o CMakeFiles\traficlight.elf.dir\HAL\LED.c.s
+
+CMakeFiles/traficlight.elf.dir/Application/app.c.obj: CMakeFiles/traficlight.elf.dir/flags.make
+CMakeFiles/traficlight.elf.dir/Application/app.c.obj: ../Application/app.c
+CMakeFiles/traficlight.elf.dir/Application/app.c.obj: CMakeFiles/traficlight.elf.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/traficlight.elf.dir/Application/app.c.obj"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/traficlight.elf.dir/Application/app.c.obj -MF CMakeFiles\traficlight.elf.dir\Application\app.c.obj.d -o CMakeFiles\traficlight.elf.dir\Application\app.c.obj -c "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\Application\app.c"
+
+CMakeFiles/traficlight.elf.dir/Application/app.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/traficlight.elf.dir/Application/app.c.i"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\Application\app.c" > CMakeFiles\traficlight.elf.dir\Application\app.c.i
+
+CMakeFiles/traficlight.elf.dir/Application/app.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/traficlight.elf.dir/Application/app.c.s"
+	C:\WinAVR-20100110\bin\avr-gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\Application\app.c" -o CMakeFiles\traficlight.elf.dir\Application\app.c.s
+
 # Object files for target traficlight.elf
 traficlight_elf_OBJECTS = \
 "CMakeFiles/traficlight.elf.dir/main.c.obj" \
 "CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.obj" \
 "CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj" \
-"CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj"
+"CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj" \
+"CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj" \
+"CMakeFiles/traficlight.elf.dir/Application/app.c.obj"
 
 # External object files for target traficlight.elf
 traficlight_elf_EXTERNAL_OBJECTS =
@@ -138,9 +168,11 @@ traficlight.elf: CMakeFiles/traficlight.elf.dir/main.c.obj
 traficlight.elf: CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.obj
 traficlight.elf: CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj
 traficlight.elf: CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj
+traficlight.elf: CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj
+traficlight.elf: CMakeFiles/traficlight.elf.dir/Application/app.c.obj
 traficlight.elf: CMakeFiles/traficlight.elf.dir/build.make
 traficlight.elf: CMakeFiles/traficlight.elf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking C executable traficlight.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\Mohamed Mehery\Documents\GitHub\Udacity-Embedded_systems_profisional\Traficlight\build\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable traficlight.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\traficlight.elf.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -141,6 +141,54 @@ flash/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\flash.dir\build.make CMakeFiles/flash.dir/build
 .PHONY : flash/fast
 
+Application/app.obj: Application/app.c.obj
+.PHONY : Application/app.obj
+
+# target to build an object file
+Application/app.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/Application/app.c.obj
+.PHONY : Application/app.c.obj
+
+Application/app.i: Application/app.c.i
+.PHONY : Application/app.i
+
+# target to preprocess a source file
+Application/app.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/Application/app.c.i
+.PHONY : Application/app.c.i
+
+Application/app.s: Application/app.c.s
+.PHONY : Application/app.s
+
+# target to generate assembly for a file
+Application/app.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/Application/app.c.s
+.PHONY : Application/app.c.s
+
+HAL/LED.obj: HAL/LED.c.obj
+.PHONY : HAL/LED.obj
+
+# target to build an object file
+HAL/LED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj
+.PHONY : HAL/LED.c.obj
+
+HAL/LED.i: HAL/LED.c.i
+.PHONY : HAL/LED.i
+
+# target to preprocess a source file
+HAL/LED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.i
+.PHONY : HAL/LED.c.i
+
+HAL/LED.s: HAL/LED.c.s
+.PHONY : HAL/LED.s
+
+# target to generate assembly for a file
+HAL/LED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.s
+.PHONY : HAL/LED.c.s
+
 MCAL/GPIO.obj: MCAL/GPIO.c.obj
 .PHONY : MCAL/GPIO.obj
 
@@ -247,6 +295,12 @@ help:
 	@echo ... rebuild_cache
 	@echo ... flash
 	@echo ... traficlight.elf
+	@echo ... Application/app.obj
+	@echo ... Application/app.i
+	@echo ... Application/app.s
+	@echo ... HAL/LED.obj
+	@echo ... HAL/LED.i
+	@echo ... HAL/LED.s
 	@echo ... MCAL/GPIO.obj
 	@echo ... MCAL/GPIO.i
 	@echo ... MCAL/GPIO.s

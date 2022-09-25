@@ -13,9 +13,13 @@ project(traficlight)
 set(SRCS    main.c
             ./MCAL/GPIO.c
             ./MCAL/TIMER.c
-            ./MCAL/INT.c)
+            ./MCAL/INT.c
+            ./HAL/LED.c
+            ./Application/app.c)
 
-set(INCS MCAL/)            
+set(INCS MCAL/
+         HAL/
+         Application/)            
 
 # message("Source files are:\n${SRCS}")
 

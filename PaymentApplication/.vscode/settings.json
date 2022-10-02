@@ -9,5 +9,6 @@
         "main.h": "c",
         "mohamed.h": "c",
         "stdio.h": "c"
-    }
+    },
+    "C_Cpp.default.configurationProvider": "go2sh.cmake-integration"
 }

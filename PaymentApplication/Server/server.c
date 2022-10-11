@@ -7,6 +7,15 @@ ST_transaction_t trans[255] = {0};
 int account_index = 0;
 int pivot = 0;
 int transnumber = 0 ;
+void showdatabase(void)
+{
+	int iterator = 0;
+	for(iterator = 0 ; iterator < pivot ; iterator++)
+	{
+		printf("Account #%d pin is %s	", iterator+1 , accounts[iterator].primaryAccountNumber);
+		printf("Balance = %.2f	\n", accounts[iterator].balance);
+	}
+}
 
 void fill_accounts(void)
 {
@@ -107,6 +116,7 @@ EN_serverError_t saveTransaction(ST_transaction_t* transData)
 	else if (transData->transState == DECLINED_STOLEN_CARD) {
 		trans[account_index].transState = DECLINED_STOLEN_CARD;
 	}
+	trans->transactionSequenceNumber += 1 ;
 	return OK_server;
 }
 
@@ -222,6 +232,7 @@ int main(void)
 	}
 	else if (transtate == APPROVED) {
 		printf("APPROVED\n");
+		showdatabase();
 	}
 	if(save_error == SAVING_FAILED) printf("SAVING_FAILED\n");
 	else

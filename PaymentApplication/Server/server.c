@@ -22,7 +22,7 @@ void fill_accounts(void)
 	int iterator = 0;
 	for(iterator = 0 ; iterator < 5 ; iterator++)
 	{
-		accounts[iterator].balance = 2000.0 + account_index * 50;
+		accounts[iterator].balance = 2000.0 ;
 		account_index++;
 		pivot++;
 	}
@@ -116,7 +116,7 @@ EN_serverError_t saveTransaction(ST_transaction_t* transData)
 	else if (transData->transState == DECLINED_STOLEN_CARD) {
 		trans[account_index].transState = DECLINED_STOLEN_CARD;
 	}
-	trans->transactionSequenceNumber += 1 ;
+	trans[account_index].transactionSequenceNumber += 1 ;
 	return OK_server;
 }
 
@@ -237,6 +237,7 @@ int main(void)
 	if(save_error == SAVING_FAILED) printf("SAVING_FAILED\n");
 	else
 	{
+		printf("Transaction serquence number is %d \n",trans[account_index].transactionSequenceNumber);
 		printf("OK_server\n");
 	}
     return 0;

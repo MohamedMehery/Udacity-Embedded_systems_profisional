@@ -94,7 +94,7 @@
      <ITEM name="TopLineAddress">00000020</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="695" x="796" flags="00008001" y="175" h="453" pid="0" iid="3">
+   <POPUP w="695" x="385" flags="00008001" y="38" h="453" pid="0" iid="3">
     <PROPERTIES/>
    </POPUP>
   </PWI>

@@ -26,8 +26,8 @@ void HAL_init(void){
 
 void Handlepedestrian(void)
 {
-// Handle the Pedestrian mode
-	uint8_t iter, carledred = 0;
+
+	uint8_t iter;
 	//car red light is off
 
 	//LED_off(LED_CAR_PORT,LED_CAR_R_PIN);
@@ -37,15 +37,25 @@ void Handlepedestrian(void)
 	//blink both yellow while ped green is on
 	for(iter=0;iter<5;iter++)
 	{
-		if(carLED<2)LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
-		LED_on(LED_PED_PORT,LED_PED_Y_PIN);
-		TIMER_delay(250);
-		if(carLED<2)LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
-		LED_off(LED_PED_PORT,LED_PED_Y_PIN);
-		TIMER_delay(500);
-		if(carLED<2)LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
-		LED_on(LED_PED_PORT,LED_PED_Y_PIN);
-		TIMER_delay(250);
+		if(carLED<2)
+		{
+			LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
+			LED_on(LED_PED_PORT,LED_PED_Y_PIN);
+			TIMER_delay(250);
+		}
+		
+		if(carLED<2){
+			LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
+			LED_off(LED_PED_PORT,LED_PED_Y_PIN);
+			TIMER_delay(500);
+		}
+		
+		if(carLED<2){
+			LED_on(LED_CAR_PORT,LED_CAR_Y_PIN);
+			LED_on(LED_PED_PORT,LED_PED_Y_PIN);
+			TIMER_delay(250);
+		}
+		
 	}
 	//Turn off yellow LEDs 
 	LED_off(LED_CAR_PORT,LED_CAR_Y_PIN);
@@ -174,7 +184,17 @@ void appStart(void){
 #ifdef APP
 ISR(INT0_vect)
 {
-	normalmode=0;
-    SET_BIT(PORTD , 2);	//set the DIO pin to high again
+	uint8_t value = 0;
+	uint8_t count = 0;
+	uint8_t iterator = 0;
+	for(iterator = 0 ; iterator < 20 ; iterator++)
+	{
+		GPIO_READ(PORT_D,2,&value);
+		count += value;
+	}
+	if(count < 10)
+	{
+		normalmode=0;
+	}
 }
 #endif

@@ -8,7 +8,7 @@ int main()
     HAL_init();
     // LED_init(PORT_C , PIN0);    //debug led
 
-	//Main loop
+	//Main loopcd 
 	while(1){
 		appStart();
 	}

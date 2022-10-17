@@ -48,6 +48,8 @@ EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 	}
 	transData->transState = APPROVED;
 	accounts[account_index].balance -= transData->terminalData.transAmount;
+	printf("The account new Balance = %.2f\n", accounts[account_index].balance );
+
 	if (saveTransaction(transData) == SAVING_FAILED) {
 		return INTERNAL_SERVER_ERROR;
 	}
@@ -232,7 +234,7 @@ int main(void)
 	}
 	else if (transtate == APPROVED) {
 		printf("APPROVED\n");
-		showdatabase();
+		// showdatabase();
 	}
 	if(save_error == SAVING_FAILED) printf("SAVING_FAILED\n");
 	else

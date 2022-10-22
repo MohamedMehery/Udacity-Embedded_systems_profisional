@@ -22,6 +22,7 @@ void Readconcel(char* cardholdername ,
 	scanf("%s",transdate);	
 	printf("Enter transaction amount\n");
 	scanf("%f",transamount);	
+
 }
 
 // valid data
@@ -53,23 +54,33 @@ void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transac
 	termData->transAmount = transamount;
     //account fill account balance
     accounts[account_index].balance = 5000.0f;
-    strcpy(accounts[account_index].primaryAccountNumber , "0123456789012345678");
+    strcpy(accounts[account_index].primaryAccountNumber , "8989374615436851");
+
+	strcpy(transdata->cardHolderData.cardExpirationDate,cardData->cardExpirationDate );
+	strcpy(transdata->cardHolderData.cardHolderName, cardData->cardHolderName );
+	strcpy(transdata->cardHolderData.primaryAccountNumber, cardData->primaryAccountNumber );
+
+	transdata->terminalData.maxTransAmount = termData->maxTransAmount;	
+	strcpy(transdata->terminalData.transactionDate , termData->transactionDate);	
+	transdata->terminalData.transAmount = termData->transAmount;	
 	
-	transdata->cardHolderData = *cardData;
-	transdata->terminalData = *termData;	
-	transdata->transactionSequenceNumber = transnumber++;
-	trans[account_index] = *transdata;
+
+	strcpy(trans[account_index].cardHolderData.cardExpirationDate,cardData->cardExpirationDate );
+	strcpy(trans[account_index].cardHolderData.cardHolderName, cardData->cardHolderName );
+	strcpy(trans[account_index].cardHolderData.primaryAccountNumber, cardData->primaryAccountNumber );
+
+	trans[account_index].terminalData.maxTransAmount = termData->maxTransAmount;	
+	strcpy(trans[account_index].terminalData.transactionDate , termData->transactionDate);	
+	trans[account_index].terminalData.transAmount = termData->transAmount;	
 
 }
 
 void appStart(void)
 {
-
 	ST_cardData_t cardData;
 	ST_terminalData_t termData;
 	ST_transaction_t transData;
 	EN_terminalError_t terminal_error;
-
 	fill_data(&cardData , &termData , &transData);
 
 	EN_cardError_t card_status = getCardHolderName(&cardData);
@@ -99,17 +110,20 @@ void appStart(void)
 		return;
 	}
 	terminal_error = isCardExpired(&cardData, &termData);
-	if (terminal_error == EXPIRED_CARD) {
+	if (terminal_error == EXPIRED_CARD) 
+	{
 		printf("EXPIRED_CARD\n");
 		return;
 	}
 	terminal_error = getTransactionAmount(&termData);
-	if (terminal_error == INVALID_AMOUNT) {
+	if (terminal_error == INVALID_AMOUNT) 
+	{
 		printf("INVALID_AMOUNT\n");
 		return;
 	}
 	terminal_error = isBelowMaxAmount(&termData);
-	if (terminal_error == EXCEED_MAX_AMOUNT){
+	if (terminal_error == EXCEED_MAX_AMOUNT)
+	{
 		printf("EXCEED_MAX_AMOUNT\n");
 		return;
 	}
@@ -120,15 +134,15 @@ void appStart(void)
 		printf("DECLINED_STOLEN_CARD\n");
 		return;
 	}
-	else if (transtate== DECLINED_INSUFFECIENT_FUND) {
+	else if (transtate== DECLINED_INSUFFECIENT_FUND) 
+	{
 		printf("DECLINED_INSUFFECIENT_FUND\n");
 		return;
 	}
-	else if (transtate == APPROVED) {
+	else if (transtate == APPROVED) 
+	{
 		printf("APPROVED\n");
-
 	}
-
 }
 
 // int main() {

@@ -17,30 +17,28 @@ void showdatabase(void)
 	}
 }
 
-void fill_accounts(void)
-{
-	int iterator = 0;
-	for(iterator = 0 ; iterator < 5 ; iterator++)
-	{
-		accounts[iterator].balance = 2000.0 ;
-		account_index++;
-		pivot++;
-	}
-	strcpy(accounts[0].primaryAccountNumber , "8989374615436851");
-	strcpy(accounts[1].primaryAccountNumber , "3439374615436851");
-	strcpy(accounts[2].primaryAccountNumber , "8444422615436851");
-	strcpy(accounts[3].primaryAccountNumber , "8339374111436851");
-	strcpy(accounts[4].primaryAccountNumber , "7779374615455551");
-}
+// void fill_accounts(void)
+// {
+// 	int iterator = 0;
+// 	for(iterator = 0 ; iterator < 5 ; iterator++)
+// 	{
+// 		accounts[iterator].balance = 2000.0 ;
+// 		account_index++;
+// 		pivot++;
+// 	}
+// 	strcpy(accounts[0].primaryAccountNumber , "8989374615436851");
+// 	strcpy(accounts[1].primaryAccountNumber , "3439374615436851");
+// 	strcpy(accounts[2].primaryAccountNumber , "8444422615436851");
+// 	strcpy(accounts[3].primaryAccountNumber , "8339374111436851");
+// 	strcpy(accounts[4].primaryAccountNumber , "7779374615455551");
+// }
 
 EN_transState_t recieveTransactionData(ST_transaction_t *transData)
 {
-	if (isValidAccount(&transData->cardHolderData)==ACCOUNT_NOT_FOUND) {
+	if (isValidAccount(&(transData->cardHolderData) )==ACCOUNT_NOT_FOUND) {
 		transData->transState = DECLINED_STOLEN_CARD;
-
 		return DECLINED_STOLEN_CARD;
-		if (saveTransaction(transData) == SAVING_FAILED)
-		return INTERNAL_SERVER_ERROR;
+
 	}
 	if (isAmountAvailable(&transData->terminalData)==LOW_BALANCE) {
 		transData->transState = DECLINED_INSUFFECIENT_FUND;		return DECLINED_INSUFFECIENT_FUND;
@@ -154,7 +152,7 @@ EN_serverError_t getTransaction(uint32_t transactionSequenceNumber, ST_transacti
 // }
 
 
-void Readconcel(char* cardholdername ,
+void Readconcel2(char* cardholdername ,
 				char* cardexpiredate,
 				char* pan,
 				char* transdate,
@@ -173,7 +171,7 @@ void Readconcel(char* cardholdername ,
 }
 
 // valid data
-void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transaction_t* transdata)
+void fill_data2(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transaction_t* transdata)
 {
 
 	char cardholdername[25] = {0};
@@ -181,7 +179,7 @@ void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transac
 	char pan[20] = {0};
 	char transdate[11] = {0};
 	float transamount = 0.0f;
-	Readconcel(cardholdername , cardexpirationdate, pan , transdate, &transamount);
+	Readconcel2(cardholdername , cardexpirationdate, pan , transdate, &transamount);
 
 	//transaction fill data
 
@@ -215,33 +213,34 @@ void fill_data(ST_cardData_t* cardData, ST_terminalData_t* termData , ST_transac
 	trans[account_index] = *transdata;
 
 }
+
 //recieveTransactionData
-int main(void)
-{
-	ST_cardData_t cardData;
-	ST_terminalData_t termData;
-	ST_transaction_t transData;
-	fill_accounts();
-	fill_data(&cardData , &termData , &transData);
-	EN_transState_t transtate = recieveTransactionData(&transData);
-	// account_index = 500;
-    EN_serverError_t save_error =  saveTransaction(&transData);
-	if (transtate == DECLINED_STOLEN_CARD) {
-		printf("DECLINED_STOLEN_CARD\n");
-	}
-	else if (transtate== DECLINED_INSUFFECIENT_FUND) {
-		printf("DECLINED_INSUFFECIENT_FUND\n");
-	}
-	else if (transtate == APPROVED) {
-		printf("APPROVED\n");
-		// showdatabase();
-	}
-	if(save_error == SAVING_FAILED) printf("SAVING_FAILED\n");
-	else
-	{
-		printf("Transaction serquence number is %d \n",trans[account_index].transactionSequenceNumber);
-		printf("OK_server\n");
-	}
-    return 0;
-}
+// int main(void)
+// {
+// 	ST_cardData_t cardData;
+// 	ST_terminalData_t termData;
+// 	ST_transaction_t transData;
+// 	fill_accounts();
+// 	fill_data2(&cardData , &termData , &transData);
+// 	EN_transState_t transtate = recieveTransactionData(&transData);
+// 	// account_index = 500;
+//     EN_serverError_t save_error =  saveTransaction(&transData);
+// 	if (transtate == DECLINED_STOLEN_CARD) {
+// 		printf("DECLINED_STOLEN_CARD\n");
+// 	}
+// 	else if (transtate== DECLINED_INSUFFECIENT_FUND) {
+// 		printf("DECLINED_INSUFFECIENT_FUND\n");
+// 	}
+// 	else if (transtate == APPROVED) {
+// 		printf("APPROVED\n");
+// 		// showdatabase();
+// 	}
+// 	if(save_error == SAVING_FAILED) printf("SAVING_FAILED\n");
+// 	else
+// 	{
+// 		printf("Transaction serquence number is %d \n",trans[account_index].transactionSequenceNumber);
+// 		printf("OK_server\n");
+// 	}
+//     return 0;
+// }
 

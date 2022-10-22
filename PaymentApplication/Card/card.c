@@ -155,21 +155,21 @@ EN_cardError_t  getCardPAN(ST_cardData_t*cardData)
 //     }
 // }
 
-int main(void)
-{
-    ST_cardData_t input ;
-    printf("Enter primaryAccountNumber\n");
-    scanf("%s",input.primaryAccountNumber);
-    EN_cardError_t outputs = OK;
-    outputs = getCardPAN(&input);
-    switch (outputs)
-    {
-        case WRONG_PAN:
-            printf("WRONG_PAN\n");
-            break;
-        default:
-            printf("OK\n");
-            break;
-    }
-    return 0;
-}
+// int main(void)
+// {
+//     ST_cardData_t input ;
+//     printf("Enter primaryAccountNumber\n");
+//     scanf("%s",input.primaryAccountNumber);
+//     EN_cardError_t outputs = OK;
+//     outputs = getCardPAN(&input);
+//     switch (outputs)
+//     {
+//         case WRONG_PAN:
+//             printf("WRONG_PAN\n");
+//             break;
+//         default:
+//             printf("OK\n");
+//             break;
+//     }
+//     return 0;
+// }

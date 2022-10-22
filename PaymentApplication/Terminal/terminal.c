@@ -179,27 +179,27 @@ EN_terminalError_t setMaxAmount(ST_terminalData_t * termData)
 // }
 
 
-int main(void)
-{
-    ST_terminalData_t input ;
+// int main(void)
+// {
+//     ST_terminalData_t input ;
 
-    // ST_terminalData_t * input = NULL;
-    // ST_terminalData_t * cardinput = NULL;
+//     // ST_terminalData_t * input = NULL;
+//     // ST_terminalData_t * cardinput = NULL;
 
-    printf("Enter maxTransAmount\n");
-    scanf("%f",&input.maxTransAmount);
+//     printf("Enter maxTransAmount\n");
+//     scanf("%f",&input.maxTransAmount);
 
-    EN_cardError_t outputs = TERMINAL_OK;
-    outputs = setMaxAmount(&input);
-    switch (outputs)
-    {
-        case INVALID_MAX_AMOUNT:
-            printf("INVALID_MAX_AMOUNT\n");
-            break;
-        default:
-            printf("TERMINAL_OK\n");
-            break;
-    }
-    return 0;
-}
+//     EN_cardError_t outputs = TERMINAL_OK;
+//     outputs = setMaxAmount(&input);
+//     switch (outputs)
+//     {
+//         case INVALID_MAX_AMOUNT:
+//             printf("INVALID_MAX_AMOUNT\n");
+//             break;
+//         default:
+//             printf("TERMINAL_OK\n");
+//             break;
+//     }
+//     return 0;
+// }
 

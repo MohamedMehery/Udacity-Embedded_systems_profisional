@@ -11,14 +11,16 @@ set(CMAKE_C_FLAGS "-mmcu=atmega32 -O1 -DF_CPU=1000000UL")#compiler take the flag
 project(traficlight)
 
 set(SRCS    main.c
-            ./MCAL/GPIO.c
-            ./MCAL/TIMER.c
-            ./MCAL/INT.c
-            ./HAL/LED.c
+            ./MCAL/gpio/GPIO.c
+            ./MCAL/timer/TIMER.c
+            ./MCAL/interrupt/INT.c
+            ./HAL/led/LED.c
             ./Application/app.c)
 
-set(INCS MCAL/
-         HAL/
+set(INCS MCAL/gpio/
+         MCAL/interrupt
+         MCAL/timer
+         HAL/led
          Application/)            
 
 # message("Source files are:\n${SRCS}")

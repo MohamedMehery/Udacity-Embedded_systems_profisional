@@ -1,9 +1,9 @@
 #ifndef _APP_H
 #define _APP_H
 
-#include "../MCAL/GPIO.h"
-#include "../MCAL/TIMER.h"
-#include "../HAL/LED.h"
+#include "../MCAL/gpio/GPIO.h"
+#include "../MCAL/timer/TIMER.h"
+#include "../HAL/led/LED.h"
 #include "../main.h"
 
 

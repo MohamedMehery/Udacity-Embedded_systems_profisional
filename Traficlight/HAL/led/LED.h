@@ -2,8 +2,8 @@
 
 #ifndef LED_H_
 #define LED_H_
-#include "../MCAL/GPIO.h"
-#include "../MCAL/TIMER.h"
+#include "../MCAL/gpio/GPIO.h"
+#include "../MCAL/timer/TIMER.h"
 
 // Car port and pins
 #define LED_CAR_PORT PORT_A

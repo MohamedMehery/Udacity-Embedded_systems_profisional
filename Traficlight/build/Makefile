@@ -165,101 +165,101 @@ Application/app.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/Application/app.c.s
 .PHONY : Application/app.c.s
 
-HAL/LED.obj: HAL/LED.c.obj
-.PHONY : HAL/LED.obj
+HAL/led/LED.obj: HAL/led/LED.c.obj
+.PHONY : HAL/led/LED.obj
 
 # target to build an object file
-HAL/LED.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.obj
-.PHONY : HAL/LED.c.obj
+HAL/led/LED.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/led/LED.c.obj
+.PHONY : HAL/led/LED.c.obj
 
-HAL/LED.i: HAL/LED.c.i
-.PHONY : HAL/LED.i
+HAL/led/LED.i: HAL/led/LED.c.i
+.PHONY : HAL/led/LED.i
 
 # target to preprocess a source file
-HAL/LED.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.i
-.PHONY : HAL/LED.c.i
+HAL/led/LED.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/led/LED.c.i
+.PHONY : HAL/led/LED.c.i
 
-HAL/LED.s: HAL/LED.c.s
-.PHONY : HAL/LED.s
+HAL/led/LED.s: HAL/led/LED.c.s
+.PHONY : HAL/led/LED.s
 
 # target to generate assembly for a file
-HAL/LED.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/LED.c.s
-.PHONY : HAL/LED.c.s
+HAL/led/LED.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/HAL/led/LED.c.s
+.PHONY : HAL/led/LED.c.s
 
-MCAL/GPIO.obj: MCAL/GPIO.c.obj
-.PHONY : MCAL/GPIO.obj
+MCAL/gpio/GPIO.obj: MCAL/gpio/GPIO.c.obj
+.PHONY : MCAL/gpio/GPIO.obj
 
 # target to build an object file
-MCAL/GPIO.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.obj
-.PHONY : MCAL/GPIO.c.obj
+MCAL/gpio/GPIO.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/gpio/GPIO.c.obj
+.PHONY : MCAL/gpio/GPIO.c.obj
 
-MCAL/GPIO.i: MCAL/GPIO.c.i
-.PHONY : MCAL/GPIO.i
+MCAL/gpio/GPIO.i: MCAL/gpio/GPIO.c.i
+.PHONY : MCAL/gpio/GPIO.i
 
 # target to preprocess a source file
-MCAL/GPIO.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.i
-.PHONY : MCAL/GPIO.c.i
+MCAL/gpio/GPIO.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/gpio/GPIO.c.i
+.PHONY : MCAL/gpio/GPIO.c.i
 
-MCAL/GPIO.s: MCAL/GPIO.c.s
-.PHONY : MCAL/GPIO.s
+MCAL/gpio/GPIO.s: MCAL/gpio/GPIO.c.s
+.PHONY : MCAL/gpio/GPIO.s
 
 # target to generate assembly for a file
-MCAL/GPIO.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/GPIO.c.s
-.PHONY : MCAL/GPIO.c.s
+MCAL/gpio/GPIO.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/gpio/GPIO.c.s
+.PHONY : MCAL/gpio/GPIO.c.s
 
-MCAL/INT.obj: MCAL/INT.c.obj
-.PHONY : MCAL/INT.obj
+MCAL/interrupt/INT.obj: MCAL/interrupt/INT.c.obj
+.PHONY : MCAL/interrupt/INT.obj
 
 # target to build an object file
-MCAL/INT.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.obj
-.PHONY : MCAL/INT.c.obj
+MCAL/interrupt/INT.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/interrupt/INT.c.obj
+.PHONY : MCAL/interrupt/INT.c.obj
 
-MCAL/INT.i: MCAL/INT.c.i
-.PHONY : MCAL/INT.i
+MCAL/interrupt/INT.i: MCAL/interrupt/INT.c.i
+.PHONY : MCAL/interrupt/INT.i
 
 # target to preprocess a source file
-MCAL/INT.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.i
-.PHONY : MCAL/INT.c.i
+MCAL/interrupt/INT.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/interrupt/INT.c.i
+.PHONY : MCAL/interrupt/INT.c.i
 
-MCAL/INT.s: MCAL/INT.c.s
-.PHONY : MCAL/INT.s
+MCAL/interrupt/INT.s: MCAL/interrupt/INT.c.s
+.PHONY : MCAL/interrupt/INT.s
 
 # target to generate assembly for a file
-MCAL/INT.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/INT.c.s
-.PHONY : MCAL/INT.c.s
+MCAL/interrupt/INT.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/interrupt/INT.c.s
+.PHONY : MCAL/interrupt/INT.c.s
 
-MCAL/TIMER.obj: MCAL/TIMER.c.obj
-.PHONY : MCAL/TIMER.obj
+MCAL/timer/TIMER.obj: MCAL/timer/TIMER.c.obj
+.PHONY : MCAL/timer/TIMER.obj
 
 # target to build an object file
-MCAL/TIMER.c.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.obj
-.PHONY : MCAL/TIMER.c.obj
+MCAL/timer/TIMER.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/timer/TIMER.c.obj
+.PHONY : MCAL/timer/TIMER.c.obj
 
-MCAL/TIMER.i: MCAL/TIMER.c.i
-.PHONY : MCAL/TIMER.i
+MCAL/timer/TIMER.i: MCAL/timer/TIMER.c.i
+.PHONY : MCAL/timer/TIMER.i
 
 # target to preprocess a source file
-MCAL/TIMER.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.i
-.PHONY : MCAL/TIMER.c.i
+MCAL/timer/TIMER.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/timer/TIMER.c.i
+.PHONY : MCAL/timer/TIMER.c.i
 
-MCAL/TIMER.s: MCAL/TIMER.c.s
-.PHONY : MCAL/TIMER.s
+MCAL/timer/TIMER.s: MCAL/timer/TIMER.c.s
+.PHONY : MCAL/timer/TIMER.s
 
 # target to generate assembly for a file
-MCAL/TIMER.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/TIMER.c.s
-.PHONY : MCAL/TIMER.c.s
+MCAL/timer/TIMER.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\traficlight.elf.dir\build.make CMakeFiles/traficlight.elf.dir/MCAL/timer/TIMER.c.s
+.PHONY : MCAL/timer/TIMER.c.s
 
 main.obj: main.c.obj
 .PHONY : main.obj
@@ -298,18 +298,18 @@ help:
 	@echo ... Application/app.obj
 	@echo ... Application/app.i
 	@echo ... Application/app.s
-	@echo ... HAL/LED.obj
-	@echo ... HAL/LED.i
-	@echo ... HAL/LED.s
-	@echo ... MCAL/GPIO.obj
-	@echo ... MCAL/GPIO.i
-	@echo ... MCAL/GPIO.s
-	@echo ... MCAL/INT.obj
-	@echo ... MCAL/INT.i
-	@echo ... MCAL/INT.s
-	@echo ... MCAL/TIMER.obj
-	@echo ... MCAL/TIMER.i
-	@echo ... MCAL/TIMER.s
+	@echo ... HAL/led/LED.obj
+	@echo ... HAL/led/LED.i
+	@echo ... HAL/led/LED.s
+	@echo ... MCAL/gpio/GPIO.obj
+	@echo ... MCAL/gpio/GPIO.i
+	@echo ... MCAL/gpio/GPIO.s
+	@echo ... MCAL/interrupt/INT.obj
+	@echo ... MCAL/interrupt/INT.i
+	@echo ... MCAL/interrupt/INT.s
+	@echo ... MCAL/timer/TIMER.obj
+	@echo ... MCAL/timer/TIMER.i
+	@echo ... MCAL/timer/TIMER.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

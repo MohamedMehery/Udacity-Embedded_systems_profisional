@@ -3,7 +3,7 @@
 
 CMakeFiles/traficlight.elf.dir/Application/app.c.obj: ../Application/app.c \
   ../Application/app.h \
-  ../MCAL/GPIO.h \
+  ../MCAL/gpio/GPIO.h \
   C:/WinAVR-20100110/avr/include/avr/io.h \
   C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
   C:/WinAVR-20100110/avr/include/inttypes.h \
@@ -15,19 +15,99 @@ CMakeFiles/traficlight.elf.dir/Application/app.c.obj: ../Application/app.c \
   C:/WinAVR-20100110/avr/include/avr/fuse.h \
   C:/WinAVR-20100110/avr/include/avr/lock.h \
   C:/WinAVR-20100110/avr/include/avr/interrupt.h \
-  ../MCAL/TIMER.h \
-  ../MCAL/GPIO.h \
-  ../HAL/LED.h \
-  ../MCAL/GPIO.h \
-  ../MCAL/TIMER.h \
+  ../MCAL/timer/TIMER.h \
+  ../MCAL/gpio/GPIO.h \
+  ../HAL/led/LED.h \
+  ../MCAL/gpio/GPIO.h \
+  ../MCAL/timer/TIMER.h \
   ../main.h \
-  ../MCAL/GPIO.h \
-  ../MCAL/TIMER.h \
-  ../MCAL/INT.h \
+  ../HAL/led/LED.h \
   ../Application/app.h
 
+CMakeFiles/traficlight.elf.dir/HAL/led/LED.c.obj: ../HAL/led/LED.c \
+  ../HAL/led/LED.h \
+  ../MCAL/gpio/GPIO.h \
+  C:/WinAVR-20100110/avr/include/avr/io.h \
+  C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
+  C:/WinAVR-20100110/avr/include/inttypes.h \
+  C:/WinAVR-20100110/avr/include/stdint.h \
+  C:/WinAVR-20100110/avr/include/avr/iom32.h \
+  C:/WinAVR-20100110/avr/include/avr/portpins.h \
+  C:/WinAVR-20100110/avr/include/avr/common.h \
+  C:/WinAVR-20100110/avr/include/avr/version.h \
+  C:/WinAVR-20100110/avr/include/avr/fuse.h \
+  C:/WinAVR-20100110/avr/include/avr/lock.h \
+  C:/WinAVR-20100110/avr/include/avr/interrupt.h \
+  ../MCAL/timer/TIMER.h \
+  ../MCAL/gpio/GPIO.h
 
-../MCAL/TIMER.h:
+CMakeFiles/traficlight.elf.dir/MCAL/gpio/GPIO.c.obj: ../MCAL/gpio/GPIO.c \
+  ../MCAL/gpio/GPIO.h \
+  C:/WinAVR-20100110/avr/include/avr/io.h \
+  C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
+  C:/WinAVR-20100110/avr/include/inttypes.h \
+  C:/WinAVR-20100110/avr/include/stdint.h \
+  C:/WinAVR-20100110/avr/include/avr/iom32.h \
+  C:/WinAVR-20100110/avr/include/avr/portpins.h \
+  C:/WinAVR-20100110/avr/include/avr/common.h \
+  C:/WinAVR-20100110/avr/include/avr/version.h \
+  C:/WinAVR-20100110/avr/include/avr/fuse.h \
+  C:/WinAVR-20100110/avr/include/avr/lock.h \
+  C:/WinAVR-20100110/avr/include/avr/interrupt.h
+
+CMakeFiles/traficlight.elf.dir/MCAL/interrupt/INT.c.obj: ../MCAL/interrupt/INT.c \
+  ../MCAL/interrupt/INT.h \
+  ../MCAL/gpio/GPIO.h \
+  C:/WinAVR-20100110/avr/include/avr/io.h \
+  C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
+  C:/WinAVR-20100110/avr/include/inttypes.h \
+  C:/WinAVR-20100110/avr/include/stdint.h \
+  C:/WinAVR-20100110/avr/include/avr/iom32.h \
+  C:/WinAVR-20100110/avr/include/avr/portpins.h \
+  C:/WinAVR-20100110/avr/include/avr/common.h \
+  C:/WinAVR-20100110/avr/include/avr/version.h \
+  C:/WinAVR-20100110/avr/include/avr/fuse.h \
+  C:/WinAVR-20100110/avr/include/avr/lock.h \
+  C:/WinAVR-20100110/avr/include/avr/interrupt.h
+
+CMakeFiles/traficlight.elf.dir/MCAL/timer/TIMER.c.obj: ../MCAL/timer/TIMER.c \
+  ../MCAL/timer/TIMER.h \
+  ../MCAL/gpio/GPIO.h \
+  C:/WinAVR-20100110/avr/include/avr/io.h \
+  C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
+  C:/WinAVR-20100110/avr/include/inttypes.h \
+  C:/WinAVR-20100110/avr/include/stdint.h \
+  C:/WinAVR-20100110/avr/include/avr/iom32.h \
+  C:/WinAVR-20100110/avr/include/avr/portpins.h \
+  C:/WinAVR-20100110/avr/include/avr/common.h \
+  C:/WinAVR-20100110/avr/include/avr/version.h \
+  C:/WinAVR-20100110/avr/include/avr/fuse.h \
+  C:/WinAVR-20100110/avr/include/avr/lock.h \
+  C:/WinAVR-20100110/avr/include/avr/interrupt.h
+
+CMakeFiles/traficlight.elf.dir/main.c.obj: ../main.c \
+  ../main.h \
+  ../MCAL/gpio/GPIO.h \
+  C:/WinAVR-20100110/avr/include/avr/io.h \
+  C:/WinAVR-20100110/avr/include/avr/sfr_defs.h \
+  C:/WinAVR-20100110/avr/include/inttypes.h \
+  C:/WinAVR-20100110/avr/include/stdint.h \
+  C:/WinAVR-20100110/avr/include/avr/iom32.h \
+  C:/WinAVR-20100110/avr/include/avr/portpins.h \
+  C:/WinAVR-20100110/avr/include/avr/common.h \
+  C:/WinAVR-20100110/avr/include/avr/version.h \
+  C:/WinAVR-20100110/avr/include/avr/fuse.h \
+  C:/WinAVR-20100110/avr/include/avr/lock.h \
+  C:/WinAVR-20100110/avr/include/avr/interrupt.h \
+  ../MCAL/timer/TIMER.h \
+  ../MCAL/gpio/GPIO.h \
+  ../HAL/led/LED.h \
+  ../Application/app.h \
+  ../MCAL/gpio/GPIO.h \
+  ../MCAL/timer/TIMER.h \
+  ../HAL/led/LED.h \
+  ../main.h
+
 
 ../Application/app.c:
 
@@ -37,7 +117,7 @@ C:/WinAVR-20100110/avr/include/avr/sfr_defs.h:
 
 ../Application/app.h:
 
-../MCAL/GPIO.h:
+../MCAL/gpio/GPIO.h:
 
 C:/WinAVR-20100110/avr/include/avr/io.h:
 
@@ -49,6 +129,8 @@ C:/WinAVR-20100110/avr/include/avr/interrupt.h:
 
 C:/WinAVR-20100110/avr/include/avr/portpins.h:
 
+../HAL/led/LED.h:
+
 C:/WinAVR-20100110/avr/include/avr/common.h:
 
 C:/WinAVR-20100110/avr/include/avr/version.h:
@@ -57,8 +139,18 @@ C:/WinAVR-20100110/avr/include/avr/fuse.h:
 
 C:/WinAVR-20100110/avr/include/avr/lock.h:
 
-../HAL/LED.h:
+../MCAL/timer/TIMER.h:
 
 ../main.h:
 
-../MCAL/INT.h:
+../HAL/led/LED.c:
+
+../MCAL/gpio/GPIO.c:
+
+../MCAL/interrupt/INT.c:
+
+../MCAL/interrupt/INT.h:
+
+../MCAL/timer/TIMER.c:
+
+../main.c:
